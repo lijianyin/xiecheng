@@ -1,0 +1,101 @@
+@charset="utf-8";/*防止出现乱码*/
+.slogan{
+	width:900px;/*宽为900像素*/
+	margin:0 auto;/*外间距上下为0左右自适应居中*/
+	text-align:center;/*字体对齐方式为居中*/
+}
+.slogan h1{
+	font-family:"Microsoft YaHei";/*字体为微软雅黑*/
+	font-size:40px;/*字体大小为40像素*/
+	color:#78c1ff;/*字体颜色为蓝色*/
+	line-height:150px;/*行高为150像素*/
+	text-shadow:20px 20px 20px rgba(164,213,255,.4);/*文字阴影左右偏移量为20像素，上下20像素，模糊程度为20像素，颜色为黑色*/
+}
+.page{
+	width:736px;/*宽为800像素*/
+	margin:0 auto;/*外间距上下为0左右自适应居中*/
+}
+.circle{
+	position:relative;/*相对定位*/
+	display:inline-block;/*将块元素转换为行内块元素*/
+	width:200px;/*宽为200像素*/
+	margin-right:40px;
+}
+.circle-title{
+	width:200px;/*宽为200像素*/
+	text-align:center;/*字体对齐方式为居中*/
+}
+.circle-title h2{
+	font-family:"Microsoft YaHei";/*字体为微软雅黑*/
+	font-size:26px;/*字体大小为26像素*/
+	color:#888;/*字体颜色为灰色*/
+	line-height:10px;/*行高为10像素*/
+	opacity:0;/*透明度为0*/
+}
+.circle-title h3{
+	font-family:"Microsoft YaHei";/*字体为微软雅黑*/
+	font-size:16px;/*字体大小为16像素*/
+	color:#78c1ff;/*字体颜色为蓝色*/
+	opacity:0;/*透明度为0*/
+}
+.circle:hover .circle-title h2{
+	opacity:1;/*透明度为百分百*/
+	transform:translateY(-40px);/*向Y上半轴位移50像素*/
+	transition:all .5s;/*所有的属性经过0.5秒完成过渡效果*/
+}
+.circle:hover .circle-title h3{
+	opacity:1;/*透明度为百分百*/
+	transform:translateY(-50px);/*向Y上半轴位移50像素*/
+	transition:all .5s .1s;/*所有的属性延迟0.1秒后经过0.5秒完成过渡效果 */
+}
+.circle-pic{
+	position:relative;/*相对定位*/
+	overflow:hidden;/*超出部分隐藏*/
+	width:200px;/*宽为200像素*/
+	height:200px;/*高为200像素*/
+	border-radius:50%;/*边框弧度为50%*/
+	z-index:1;
+}
+.circle-pic img{
+	position:absolute;/*绝对定位*/
+}
+.circle-pic img:nth-child(1){
+	left:-400px;/*距离左边为400像素*/
+}
+.circle-pic img:nth-child(2){
+	left:0;/*距离左边为0像素*/
+}
+.circle-pic img:nth-child(3){
+	left:-400px;/*距离左边为500像素*/
+}
+.circle:hover .circle-pic img:nth-child(1){
+	left:0;/*距离左边为0像素*/
+	transition:all 2s linear;/*所有的属性经过2秒匀速完成过渡效果*/
+}
+.circle:hover .circle-pic img:nth-child(2){
+	left:-400px;/*距离左边为400像素*/
+	transition:all 2s linear;/*所有的属性经过2秒匀速完成过渡效果*/
+}
+.circle:hover .circle-pic img:nth-child(3){
+	left:0;/*距离左边为0像素*/
+	transition:all 4s linear;/*所有的属性经过4秒匀速完成过渡效果*/
+}
+.circle:hover .circle-pic{
+	transform:scale(1.1);/*放大1.1倍*/
+	transition:all .5s;/*所有的属性经过0.5秒完成过渡效果*/
+}
+.shadow{
+	position:relative;/*相对定位*/
+	z-index:-1;/*层级为最底层*/
+	top:-46px;/*距离上边为46像素*/
+	left:-12px;/*距离左边为12像素*/
+	width:200px;/*宽为200像素*/
+	height:20px;/*高为20像素*/
+	border-radius:50%;/*边框弧度为50%*/
+	box-shadow:20px 40px 20px #c5e2ff;/*阴影左右偏移量为20像素，上下40像素，模糊程度为20像素，颜色为蓝色*/
+}
+.circle:hover .shadow{
+	transform:scale(1.1);/*放大1.1倍*/
+	top:-20px;/*距离上边为20像素*/
+	transition:all .5s;/*所有的属性经过0.5秒完成过渡效果*/
+}
